@@ -12,6 +12,7 @@ const EmailSection = () => {
     e.preventDefault();
     const data = {
       email: e.target.email.value,
+      phone: e.target.phone.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
@@ -50,16 +51,15 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://linkedin.com">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -85,6 +85,21 @@ const EmailSection = () => {
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="jacob@google.com"
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="phone"
+                className="text-white block mb-2 text-sm font-medium"
+              >
+                Your phone number
+              </label>
+              <input
+                name="phone"
+                type="tel"
+                id="phone"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="123-456-7890"
               />
             </div>
             <div className="mb-6">
